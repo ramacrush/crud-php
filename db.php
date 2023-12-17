@@ -1,8 +1,8 @@
 <?php 
 $host ="localhost";
-$user ="root";
-$pass ="";
-$db ="phpdasar";
+$user ="rama_root123";
+$pass ="Ramacrush46";
+$db ="rama_crud";
 
 $conn = mysqli_connect($host,$user,$pass,$db);
 
