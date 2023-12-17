@@ -1,25 +1,3 @@
-<?php 
-if (isset($_POST['simpan'])) {
-require 'db.php';
-$nama = $_POST['nama'];
-$kelas = $_POST['kelas'];
-$alamat = $_POST['alamat'];
-$nohp = $_POST['nohp'];
-
-$sql ="INSERT INTO siswa VALUES ('' , ' $nama','$kelas','$alamat','$nohp')";
-
-if(mysqli_query($conn, $sql)){
-    echo '<p class="text-green-500">data berhasil di simpan</p>';
-} else{
-    echo '<p class="text-red-500">data gagal di simpan</p>';
-}
-
-
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +8,7 @@ if(mysqli_query($conn, $sql)){
 </head>
 <body class="bg-blue-200 space-y-3 p-3">
     
-    <form action="" class="space-y-3 sm:w-96 w-full p-3 bg-white" method="post">
+    <form action="create.php" class="space-y-3 sm:w-96 w-full p-3 bg-white" method="post">
         <label class="font-bold" for="nama">nama</label>
         <input type="text" class="w-full p-3 rounded bg-gray-100 focus:outline-blue-500" id="nama" required name="nama">
         <label class="font-bold" for="kelas">kelas</label>
